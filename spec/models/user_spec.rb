@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
       expect(user.errors.messages[:provider]).to include("can't be blank")
     end
 
-    it 'should validate uniquness of login' do
+    it 'should validate uniqueness of login' do
       user = create :user
       other_user = build :user, login: user.login
       expect(other_user).not_to be_valid

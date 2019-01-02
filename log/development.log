@@ -1,303 +1,112 @@
-Started GET "/" for 127.0.0.1 at 2018-12-21 16:56:57 -0800
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (24.4ms)
-Completed 200 OK in 110ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
 
+name { "John Smith" }
 
-Started GET "/" for 127.0.0.1 at 2018-12-21 16:56:58 -0800
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
-Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
 
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
 
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  ↳ bin/rails:9
-  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  ↳ bin/rails:9
-  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ bin/rails:9
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:9
-Migrating to CreateArticles (20181222005822)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "slug" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ db/migrate/20181222005822_create_articles.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181222005822"]]
-  ↳ bin/rails:9
-  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
-  ↳ bin/rails:9
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  ↳ bin/rails:9
-  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
-  ↳ bin/rails:9
-  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-22 00:58:38.473785"], ["updated_at", "2018-12-22 00:58:38.473785"]]
-  ↳ bin/rails:9
-  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-22 00:59:08.404465"], ["updated_at", "2018-12-22 00:59:08.404465"]]
-  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
-  [1m[36mArticle Load (4.8ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mArticle Destroy (1.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 1]]
-  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
-Started GET "/" for 127.0.0.1 at 2018-12-21 17:32:55 -0800
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (4.8ms)
-Completed 200 OK in 22ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+ (called from block (2 levels) in <main> at /Users/michaelye/code/rails-api/spec/factories/users.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
 
+url { "http://example.com" }
 
-Started GET "/" for 127.0.0.1 at 2018-12-24 12:22:39 -0800
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (5.7ms)
-Completed 200 OK in 70ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
 
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
 
-Started GET "/favicon.ico" for 127.0.0.1 at 2018-12-24 12:22:40 -0800
-  
-ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
-actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.2) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/articles" for 127.0.0.1 at 2018-12-24 14:18:24 -0800
-  
-ActionController::RoutingError (No route matches [GET] "/articles"):
-  
-actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.2) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2018-12-24 15:31:41 -0800
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
-Completed 200 OK in 53ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+ (called from block (2 levels) in <main> at /Users/michaelye/code/rails-api/spec/factories/users.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
 
+avatar_url { "http://example.com/avatar" }
 
-Started GET "/articles" for 127.0.0.1 at 2018-12-24 15:31:47 -0800
-Processing by ArticlesController#index as HTML
-Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
 
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
 
-Started GET "/" for 127.0.0.1 at 2018-12-24 15:32:41 -0800
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
-Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+ (called from block (2 levels) in <main> at /Users/michaelye/code/rails-api/spec/factories/users.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
 
+provider { "github" }
 
-Started GET "/hello" for 127.0.0.1 at 2018-12-24 15:32:47 -0800
-  
-ActionController::RoutingError (No route matches [GET] "/hello"):
-  
-actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.2) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/articles" for 127.0.0.1 at 2018-12-24 15:32:51 -0800
-Processing by ArticlesController#index as HTML
-Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
 
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
 
-Started GET "/articles" for 127.0.0.1 at 2018-12-26 13:27:21 -0800
-Processing by ArticlesController#index as HTML
-  [1m[36mArticle Load (2.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
-  ↳ /Users/michaelye/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
-Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+ (called from block (2 levels) in <main> at /Users/michaelye/code/rails-api/spec/factories/users.rb:7)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
 
+name { "John Smith" }
 
-  
-  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
-  ↳ /Users/michaelye/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
-NoMethodError (undefined method `page' for #<ActiveRecord::Relation []>):
-  
-app/controllers/articles_controller.rb:3:in `index'
-Started GET "/articles" for 127.0.0.1 at 2018-12-26 13:27:48 -0800
-Processing by ArticlesController#index as HTML
-  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
-  ↳ /Users/michaelye/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
-Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
 
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
 
-  
-  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
-  ↳ /Users/michaelye/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
-NoMethodError (undefined method `page' for #<ActiveRecord::Relation []>):
-  
-app/controllers/articles_controller.rb:3:in `index'
-Started GET "/articles" for 127.0.0.1 at 2018-12-26 13:27:49 -0800
-Processing by ArticlesController#index as HTML
-  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
-  ↳ /Users/michaelye/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
-Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+ (called from block (2 levels) in <main> at /Users/michaelye/code/rails-api/spec/factories/users.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
 
+url { "http://example.com" }
 
-  
-  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
-  ↳ /Users/michaelye/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
-NoMethodError (undefined method `page' for #<ActiveRecord::Relation []>):
-  
-app/controllers/articles_controller.rb:3:in `index'
-Started GET "/articles" for 127.0.0.1 at 2018-12-26 13:28:29 -0800
-Processing by ArticlesController#index as HTML
-  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
-  ↳ /Users/michaelye/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
-Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
 
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
 
-  
-  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ?[0m  [["LIMIT", 11]]
-  ↳ /Users/michaelye/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
-NoMethodError (undefined method `page' for #<ActiveRecord::Relation []>):
-  
-app/controllers/articles_controller.rb:3:in `index'
-Started GET "/articles" for 127.0.0.1 at 2018-12-26 13:29:39 -0800
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/michaelye/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
-Processing by ArticlesController#index as HTML
-  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
-  ↳ app/controllers/articles_controller.rb:6
-[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.1ms)
-Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+ (called from block (2 levels) in <main> at /Users/michaelye/code/rails-api/spec/factories/users.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
 
+avatar_url { "http://example.com/avatar" }
 
-Started GET "/articles" for 127.0.0.1 at 2018-12-26 13:29:41 -0800
-Processing by ArticlesController#index as HTML
-  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
-  ↳ app/controllers/articles_controller.rb:6
-[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (0.33ms)
-Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
 
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
 
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ db/seeds.rb:9
-  [1m[36mArticle Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."slug" = ? LIMIT ?[0m  [["slug", "article-title-1"], ["LIMIT", 1]]
-  ↳ db/seeds.rb:9
-  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Article title 1"], ["content", "Article content 1"], ["slug", "article-title-1"], ["created_at", "2018-12-26 21:40:58.223567"], ["updated_at", "2018-12-26 21:40:58.223567"]]
-  ↳ db/seeds.rb:9
-  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
-  ↳ db/seeds.rb:9
-  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
-  ↳ db/seeds.rb:9
-  [1m[36mArticle Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."slug" = ? LIMIT ?[0m  [["slug", "article-title-2"], ["LIMIT", 1]]
-  ↳ db/seeds.rb:9
-  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Article title 2"], ["content", "Article content 2"], ["slug", "article-title-2"], ["created_at", "2018-12-26 21:40:58.228272"], ["updated_at", "2018-12-26 21:40:58.228272"]]
-  ↳ db/seeds.rb:9
-  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
-  ↳ db/seeds.rb:9
-  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
-  ↳ db/seeds.rb:9
-  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."slug" = ? LIMIT ?[0m  [["slug", "article-title-3"], ["LIMIT", 1]]
-  ↳ db/seeds.rb:9
-  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Article title 3"], ["content", "Article content 3"], ["slug", "article-title-3"], ["created_at", "2018-12-26 21:40:58.231362"], ["updated_at", "2018-12-26 21:40:58.231362"]]
-  ↳ db/seeds.rb:9
-  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
-  ↳ db/seeds.rb:9
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
-Started GET "/articles" for 127.0.0.1 at 2018-12-26 13:41:07 -0800
-Processing by ArticlesController#index as HTML
-  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
-  ↳ app/controllers/articles_controller.rb:6
-[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (3.06ms)
-Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.9ms)
+ (called from block (2 levels) in <main> at /Users/michaelye/code/rails-api/spec/factories/users.rb:6)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
 
+provider { "github" }
 
-Started GET "/articles" for 127.0.0.1 at 2018-12-26 13:41:42 -0800
-Processing by ArticlesController#index as HTML
-  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
-  ↳ app/controllers/articles_controller.rb:6
-[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.86ms)
-Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
 
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
 
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:9
-Migrating to CreateUsers (20190102044743)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  ↳ db/migrate/20190102044743_create_users.rb:3
-  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar NOT NULL, "name" varchar, "url" varchar, "avatar_url" varchar, "provider" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ db/migrate/20190102044743_create_users.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190102044743"]]
-  ↳ bin/rails:9
-  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
-  ↳ bin/rails:9
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:9
+ (called from block (2 levels) in <main> at /Users/michaelye/code/rails-api/spec/factories/users.rb:7)
